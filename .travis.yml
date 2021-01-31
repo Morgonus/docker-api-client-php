@@ -1,0 +1,19 @@
+language: php
+
+dist: xenial
+
+services:
+    - docker
+
+matrix:
+    include:
+        - php: 7.4
+          env: deps=high
+        - php: 8.0
+          env: deps=low
+    fast_finish: true
+
+before_install:
+    - composer install
+script:
+    - echo "test"
