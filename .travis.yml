@@ -4,7 +4,9 @@ dist: xenial
 
 services:
     - docker
-
+addons:
+    sonarcloud:
+        organization: "morgonus"
 matrix:
     include:
         - php: 7.4
